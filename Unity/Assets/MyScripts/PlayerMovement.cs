@@ -71,6 +71,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void MovementAudio()
     {
+        if (!groundCheck.isGrounded)
+            return;
         // Play the correct audio clip based on whether or not the player is moving and what audio is currently playing.
 
         // Checks if the player is moving
