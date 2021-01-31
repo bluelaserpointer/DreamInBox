@@ -18,13 +18,14 @@ public class MainRooms : MonoBehaviour
 
     };
     public float rotationSpeed = 1.8f;
-    public float resetLimit = 2f;
+    public float resetLimit = 1.9f;
 
-
+    private AudioSource audioSource;
     private Quaternion targetRotation;
     private bool rotating = false;
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Awake()
@@ -41,11 +42,22 @@ public class MainRooms : MonoBehaviour
     void FixedUpdate()
     {
         float angle = Quaternion.Angle(transform.rotation, targetRotation);
+
+        if(rotating == true)
+        {
+            if(audioSource.isPlaying == false)
+            {
+                audioSource.Play();
+                Debug.Log("Started playing");
+            }
+        }
+
         if (rotating && angle < resetLimit)
         {
             Camera.main.GetComponent<CameraShake>().Shake();
             transform.rotation = targetRotation;
             rotating = false;
+            audioSource.Stop();
         }
 
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
