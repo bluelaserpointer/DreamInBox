@@ -59,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
             //TODO: SE
         }
         //detect falled form world and teleprot to mainroom
-        if (transform.position.y < -10)
+        if (transform.position.y < -25)
         {
             LevelChanger levelChanger = GameObject.FindGameObjectWithTag("LevelChanger").GetComponentInChildren<LevelChanger>();
             levelChanger.FadeToLevel("MainRoom");
@@ -71,8 +71,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void MovementAudio()
     {
-        if (!groundCheck.isGrounded)
+        if (!groundCheck.isGrounded) {
+            if (m_MovementAudio.isPlaying)
+                m_MovementAudio.Stop();
             return;
+        }
         // Play the correct audio clip based on whether or not the player is moving and what audio is currently playing.
 
         // Checks if the player is moving
