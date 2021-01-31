@@ -15,8 +15,7 @@ public class DungeonCamera : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         virtualCamera = GetComponent<CinemachineVirtualCamera>();
-        if(player != null)
-            distanceVector = (player.transform.position - transform.position).normalized;
+        distanceVector = new Vector3(0, -1, 0);
     }
 
     // Update is called once per frame
@@ -25,8 +24,6 @@ public class DungeonCamera : MonoBehaviour
         if(player == null)
         {
             player = GameObject.FindGameObjectWithTag("Player");
-            if (player != null)
-                distanceVector = (player.transform.position - transform.position).normalized;
         }
         else
         {
