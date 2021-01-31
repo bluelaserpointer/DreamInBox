@@ -1,16 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class DungeonCamera : MonoBehaviour
 {
     public float followSpeed;
     public float followDistance;
+    public Vector3 distanceVector;
+    private CinemachineVirtualCamera virtualCamera;
     private GameObject player;
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        virtualCamera = GetComponent<CinemachineVirtualCamera>();
+        distanceVector = (player.transform.position - transform.position).normalized;
     }
 
     // Update is called once per frame
@@ -22,11 +27,8 @@ public class DungeonCamera : MonoBehaviour
         }
         else
         {
-            transform.LookAt(player.transform);
-            if(Vector3.Distance(player.transform.position, transform.position) > followDistance)
-            {
-                transform.position = Vector3.Lerp(transform.position, new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z), followSpeed * Time.deltaTime);
-            }
+            Vector3 targetPosition = player.transform.position - distanceVector * followDistance;
+            transform.position = Vector3.Lerp(transform.position, targetPosition, followSpeed * Time.deltaTime);
         }
     }
 
