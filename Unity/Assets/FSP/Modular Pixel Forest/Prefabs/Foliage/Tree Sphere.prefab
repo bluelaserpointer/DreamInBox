@@ -129,8 +129,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5e283233d7a7d654eac3e86fe6585598, type: 2}
-  - {fileID: 2100000, guid: 64528f61cdb4977458013c455394aac6, type: 2}
+  - {fileID: 2100000, guid: c180db9d69801744fb690caa536040ea, type: 2}
+  - {fileID: 2100000, guid: b2e1e894ecc2f1749a4d49f18590c938, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -161,7 +161,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: c8842cff312efa2458d2d4b9ff4346e6, type: 2}
