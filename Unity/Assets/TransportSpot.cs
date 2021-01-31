@@ -14,7 +14,7 @@ public class TransportSpot : MonoBehaviour
 
     void Start()
     {
-        if (comeFromScenes.Contains(Player.lastScene))
+        if (comeFromScenes.Contains("All") || comeFromScenes.Contains(Player.lastScene))
         {
             if(SceneManager.GetActiveScene().name.Equals("MainRoom"))
             {

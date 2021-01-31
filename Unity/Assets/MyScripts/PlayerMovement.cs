@@ -180,7 +180,10 @@ public class PlayerMovement : MonoBehaviour
     public void OnTriggerStay(Collider collider)
     {
         //Debug.Log(collider.gameObject.name);
-
+        if (collider.name.Equals("MAST_Grid"))
+        {
+            SceneManager.LoadScene("堕落");
+        }
         //transport
         TransportSpot transportSpot = collider.GetComponent<TransportSpot>();
         if (transportSpot != null && transportSpot.gotoScene != null && transportSpot.gotoScene.Length > 0)
@@ -201,17 +204,8 @@ public class PlayerMovement : MonoBehaviour
             item.gameObject.SetActive(false);
             //TODO: item get notify(UI & SE)
         }
-
         VolumeModification(collider);
-
-
-
-
-
-
     }
-
-
     private void Jump()
     {
         //jump TODO: prevent flying

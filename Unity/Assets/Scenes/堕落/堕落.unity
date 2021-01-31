@@ -3487,10 +3487,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6bd255ba4832d04dbe890bf25d9b577, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightRangeMax: 50
-  lightRangeMin: 5
-  lightBreathOffset: 5
-  lightBreathSpeed: 1.5
   lightRotateSpeed: 0.25
 --- !u!1001 &1509562411
 PrefabInstance:
@@ -3889,7 +3885,7 @@ GameObject:
   - component: {fileID: 1569166027}
   - component: {fileID: 1569166025}
   m_Layer: 0
-  m_Name: <<<MainRoom
+  m_Name: <<<All
   m_TagString: SpawnPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3908,7 +3904,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   comeFromScenes:
-  - MainRoom
+  - All
   gotoScene: 
   needInteraction: 0
 --- !u!23 &1569166027
