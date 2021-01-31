@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     private float m_VerticalMovementInputValue;
     private Vector3 movementDirection;
     public float m_RaycastRange = 50f;
-    public float jumpSpeed = 5f;
+    public float jumpSpeed = 7f;
     private GameObject lastHitWall;
     public GroundCheck groundCheck;
 
