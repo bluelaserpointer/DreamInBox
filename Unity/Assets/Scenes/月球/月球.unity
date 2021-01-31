@@ -7330,12 +7330,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 348545763}
-  - component: {fileID: 348545762}
-  - component: {fileID: 348545761}
   - component: {fileID: 348545760}
   - component: {fileID: 348545764}
   m_Layer: 0
-  m_Name: ">>>\u5916\u661F\u8FEA\u65AF\u79D1"
+  m_Name: ">>>\u5927\u6D1E\u7A74"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7349,58 +7347,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 348545759}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &348545761
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 348545759}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!33 &348545762
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 348545759}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &348545763
 Transform:
   m_ObjectHideFlags: 0
@@ -7409,8 +7360,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 348545759}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.45, y: 1.59, z: -3.34}
-  m_LocalScale: {x: 1.9152346, y: 1.0000001, z: 0.113345996}
+  m_LocalPosition: {x: 19.45, y: 3.4858, z: -3.34}
+  m_LocalScale: {x: 1.9152346, y: 3.0203354, z: 0.113345996}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -7428,7 +7379,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   comeFromScenes: []
-  gotoScene: "\u5916\u661F\u8FEA\u65AF\u79D1"
+  gotoScene: "\u5927\u6D1E\u7A74"
   needInteraction: 0
 --- !u!1001 &349320034
 PrefabInstance:
@@ -9014,12 +8965,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 441514109}
-  - component: {fileID: 441514108}
-  - component: {fileID: 441514107}
   - component: {fileID: 441514106}
   - component: {fileID: 441514110}
   m_Layer: 0
-  m_Name: ">>>\u7A7A\u95F4\u7AD9"
+  m_Name: ">>>\u7A7A\u95F4\u7AD9-\u5357"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9038,53 +8987,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &441514107
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 441514105}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!33 &441514108
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 441514105}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &441514109
 Transform:
   m_ObjectHideFlags: 0
@@ -9093,8 +8995,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 441514105}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20.047, y: 12.73, z: 9.99}
-  m_LocalScale: {x: 2.5837307, y: 1, z: 1}
+  m_LocalPosition: {x: 19.9847, y: 11.597, z: 7.6889}
+  m_LocalScale: {x: 2.70837, y: 1.3519382, z: 0.9405437}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -9112,7 +9014,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   comeFromScenes: []
-  gotoScene: "\u7A7A\u95F4\u7AD9"
+  gotoScene: "\u7A7A\u95F4\u7AD9-\u5357"
   needInteraction: 0
 --- !u!1001 &444515564
 PrefabInstance:
@@ -15058,12 +14960,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 776041512}
-  - component: {fileID: 776041511}
-  - component: {fileID: 776041510}
-  - component: {fileID: 776041509}
   - component: {fileID: 776041508}
   m_Layer: 0
-  m_Name: "<<<\u5916\u661F\u8FEA\u65AF\u79D1"
+  m_Name: "<<<\u5927\u6D1E\u7A74"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15082,69 +14981,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   comeFromScenes:
-  - "\u5916\u661F\u8FEA\u65AF\u79D1"
+  - "\u5927\u6D1E\u7A74"
   gotoScene: 
   needInteraction: 0
---- !u!65 &776041509
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 776041507}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &776041510
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 776041507}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!33 &776041511
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 776041507}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &776041512
 Transform:
   m_ObjectHideFlags: 0
@@ -34412,7 +34251,7 @@ GameObject:
   - component: {fileID: 1711567939}
   - component: {fileID: 1711567938}
   m_Layer: 0
-  m_Name: "<<<\u7A7A\u95F4\u7AD9"
+  m_Name: "<<<\u7A7A\u95F4\u7AD9-\u5357"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34431,7 +34270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   comeFromScenes:
-  - "\u7A7A\u95F4\u7AD9"
+  - "\u7A7A\u95F4\u7AD9-\u5357"
   gotoScene: 
   needInteraction: 0
 --- !u!65 &1711567939
