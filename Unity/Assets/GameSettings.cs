@@ -40,6 +40,11 @@ public class GameSettings
         GameSettings.volume = GameSettings.volume - 0.01 < 0.0f ? 0.0f : GameSettings.volume - 0.01f;
     }
 
+    public static float CalculateVolume(float volume)
+    {
+        return volume * GameSettings.volume;
+    }
+
     public static void ExitGame()
     {
         Debug.Log("EXIT GAME");

@@ -49,6 +49,7 @@ public class PlayerMovement : MonoBehaviour
         m_HorizontalMovementInputValue = Input.GetAxis(m_HorizontalMovementAxisName);
         m_VerticalMovementInputValue = Input.GetAxis(m_VerticalMovementAxisName);
 
+        m_MovementAudio.volume = GameSettings.volume;
         MovementAudio();
         Jump();
 
@@ -229,12 +230,14 @@ public class PlayerMovement : MonoBehaviour
             {
                 Debug.Log("Increased Volume");
                 GameSettings.IncreaseVolume();
+                collider.GetComponent<AudioSource>().volume = GameSettings.volume;
                 collider.GetComponent<AudioSource>().Play();
             }
             if (collider.tag == "VolumeDown")
             {
                 Debug.Log("Decreased Volume");
                 GameSettings.DecreaseVolume();
+                collider.GetComponent<AudioSource>().volume = GameSettings.volume;
                 collider.GetComponent<AudioSource>().Play();
             }
         }
