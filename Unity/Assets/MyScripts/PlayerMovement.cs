@@ -179,7 +179,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnTriggerStay(Collider collider)
     {
-        Debug.Log(collider.gameObject.name);
+        //Debug.Log(collider.gameObject.name);
         VolumeModification(collider);
 
         //transport
@@ -212,7 +212,7 @@ public class PlayerMovement : MonoBehaviour
     private void Jump()
     {
         //jump TODO: prevent flying
-        Debug.Log(groundCheck.isGrounded);
+        //Debug.Log(groundCheck.isGrounded);
         if (Input.GetButton("Jump") && groundCheck.isGrounded)
         {
             m_Rigidbody.velocity = new Vector2(m_Rigidbody.velocity.x, 0);//施加y方向速度，x方向维持原速
