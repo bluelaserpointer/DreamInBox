@@ -180,7 +180,6 @@ public class PlayerMovement : MonoBehaviour
     public void OnTriggerStay(Collider collider)
     {
         //Debug.Log(collider.gameObject.name);
-        VolumeModification(collider);
 
         //transport
         TransportSpot transportSpot = collider.GetComponent<TransportSpot>();
@@ -202,12 +201,15 @@ public class PlayerMovement : MonoBehaviour
             //TODO: item get notify(UI & SE)
         }
 
+        VolumeModification(collider);
+
 
 
 
 
 
     }
+
 
     private void Jump()
     {
@@ -223,14 +225,14 @@ public class PlayerMovement : MonoBehaviour
 
     private void VolumeModification(Collider collider)
     {
-        if (CheckInteraction())
+        if (Input.GetButton("Interaction"))
         {
             if (collider.tag == "VolumeUp")
             {
                 Debug.Log("Increased Volume");
                 GameSettings.IncreaseVolume();
             }
-            if (collider.tag == "VolumeUp")
+            if (collider.tag == "VolumeDown")
             {
                 Debug.Log("Decreased Volume");
                 GameSettings.DecreaseVolume();

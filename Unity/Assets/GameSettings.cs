@@ -32,11 +32,11 @@ public class GameSettings
 
     public static void IncreaseVolume()
     {
-        GameSettings.volume = GameSettings.volume + 0.1f > 1.0f ? 1.0f : GameSettings.volume + 0.1f;
+        GameSettings.volume = GameSettings.volume + 0.01 > 1.0f ? 1.0f : GameSettings.volume + 0.01f;
     }
 
     public static void DecreaseVolume()
     {
-        GameSettings.volume = GameSettings.volume - 0.1f < 0.0f ? 0.0f : GameSettings.volume - 0.1f;
+        GameSettings.volume = GameSettings.volume - 0.01 < 0.0f ? 0.0f : GameSettings.volume - 0.01f;
     }
 }
