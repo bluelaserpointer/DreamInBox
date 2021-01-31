@@ -25,6 +25,8 @@ public class TransportSpot : MonoBehaviour
             }   
             Instantiate(Resources.Load("PlayerVer1"), transform.position + transform.up * 1, transform.rotation);
             Instantiate(Resources.Load("Inventory"));
+
+            Instantiate(Resources.Load("LevelChanger"));
         }
     }
     public virtual void Transport()
@@ -33,7 +35,11 @@ public class TransportSpot : MonoBehaviour
         {
             gotoScene = "EndScene";
         }
-        SceneManager.LoadScene(gotoScene);
+
+        LevelChanger levelChanger = GameObject.FindGameObjectWithTag("LevelChanger").GetComponentInChildren<LevelChanger>();
+        levelChanger.FadeToLevel(gotoScene);
+        // SceneManager.LoadScene(gotoScene);
+
         BGMManeger.sceneChanged = true;
     }
 }
