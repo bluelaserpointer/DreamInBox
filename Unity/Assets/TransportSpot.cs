@@ -28,6 +28,13 @@ public class TransportSpot : MonoBehaviour
     }
     public virtual void Transport()
     {
-        SceneManager.LoadScene(gotoScene);
+        if(gotoScene.Equals("MainRoom") && Player.completelyUsedTransforms.Count == 6)
+        {
+            SceneManager.LoadScene("EndScene");
+        }
+        else
+        {
+            SceneManager.LoadScene(gotoScene);
+        }
     }
 }

@@ -8,7 +8,7 @@ public class MainRoomsWall : MonoBehaviour
     public MainRooms.MainRoomType roomType;
 
     public bool hit = false;
-    private float hitTimeLimit = 2f;
+    private float hitTimeLimit = 1f;
     private float currHitTime = 0f;
     public GameObject Decor;
 

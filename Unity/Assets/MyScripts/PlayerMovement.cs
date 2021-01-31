@@ -59,6 +59,11 @@ public class PlayerMovement : MonoBehaviour
             Player.NextTransform();
             //TODO: SE
         }
+        //detect falled form world and teleprot to mainroom
+        if (transform.position.y < -10)
+        {
+            SceneManager.LoadScene("MainRoom");
+        }
     }
 
 
@@ -169,7 +174,7 @@ public class PlayerMovement : MonoBehaviour
         //Debug.Log(collider.gameObject.name);
         if (collider.name.Equals("MAST_Grid"))
         {
-            SceneManager.LoadScene("堕落");
+            SceneManager.LoadScene("MainRoom");
         }
         //transport
         TransportSpot transportSpot = collider.GetComponent<TransportSpot>();
