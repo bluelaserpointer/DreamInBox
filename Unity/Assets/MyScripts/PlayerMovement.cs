@@ -15,8 +15,9 @@ public class PlayerMovement : MonoBehaviour
     public float m_VerticalMovementInputValue;
     private Vector3 movementDirection;
     public float m_RaycastRange = 50f;
+    public float jumpSpeed = 5f;
     private GameObject lastHitWall;
-    // private Collider lastCollider
+    public GroundCheck groundCheck;
 
     private void Awake()
     {
@@ -59,6 +60,8 @@ public class PlayerMovement : MonoBehaviour
             Player.NextTransform();
             //TODO: SE
         }
+        Jump();
+
 
     }
 
@@ -90,6 +93,7 @@ public class PlayerMovement : MonoBehaviour
         Move();
         Turn();
         Raycast();
+
         // CheckInteraction();
 
     }
@@ -175,6 +179,9 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnTriggerStay(Collider collider)
     {
+        Debug.Log(collider.gameObject.name);
+        VolumeModification(collider);
+
         //transport
         TransportSpot transportSpot = collider.GetComponent<TransportSpot>();
         if (transportSpot != null && transportSpot.gotoScene != null && transportSpot.gotoScene.Length > 0)
@@ -195,17 +202,39 @@ public class PlayerMovement : MonoBehaviour
             //TODO: item get notify(UI & SE)
         }
 
-        // TODO: Jump should only occur when colliding with ground
-        Jump();
+
+
+
+
+
     }
 
     private void Jump()
     {
         //jump TODO: prevent flying
-        if (Input.GetButton("Jump"))
+        Debug.Log(groundCheck.isGrounded);
+        if (Input.GetButton("Jump") && groundCheck.isGrounded)
         {
             m_Rigidbody.velocity = new Vector2(m_Rigidbody.velocity.x, 0);//施加y方向速度，x方向维持原速
-            m_Rigidbody.AddForce(new Vector2(m_Rigidbody.velocity.x, 30f));
+            // m_Rigidbody.AddForce(new Vector2(m_Rigidbody.velocity.x, 30f));
+            m_Rigidbody.velocity = m_Rigidbody.velocity + new Vector3(0f, jumpSpeed);
+        }
+    }
+
+    private void VolumeModification(Collider collider)
+    {
+        if (CheckInteraction())
+        {
+            if (collider.tag == "VolumeUp")
+            {
+                Debug.Log("Increased Volume");
+                GameSettings.IncreaseVolume();
+            }
+            if (collider.tag == "VolumeUp")
+            {
+                Debug.Log("Decreased Volume");
+                GameSettings.DecreaseVolume();
+            }
         }
     }
 }
