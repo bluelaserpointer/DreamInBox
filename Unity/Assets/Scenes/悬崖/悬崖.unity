@@ -20742,7 +20742,7 @@ GameObject:
   - component: {fileID: 1191974322}
   - component: {fileID: 1191974321}
   m_Layer: 0
-  m_Name: "<<<\u660E\u4EAE\u68EE\u6797"
+  m_Name: "<<<\u660E\u4EAE\u68EE\u6797, \u5730\u4E0B\u8FF7\u5BAB"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20762,6 +20762,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   comeFromScenes:
   - "\u660E\u4EAE\u68EE\u6797"
+  - "\u5730\u4E0B\u8FF7\u5BAB"
   gotoScene: 
   needInteraction: 0
 --- !u!4 &1191974322
