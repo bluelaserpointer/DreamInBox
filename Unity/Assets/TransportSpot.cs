@@ -23,6 +23,7 @@ public class TransportSpot : MonoBehaviour
                     Destroy(player);
             }   
             Instantiate(Resources.Load("PlayerVer1"), transform.position + transform.up * 1, transform.rotation);
+            Instantiate(Resources.Load("Inventory"));
         }
     }
     public virtual void Transport()

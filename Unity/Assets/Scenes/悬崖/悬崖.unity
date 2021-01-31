@@ -17139,7 +17139,7 @@ GameObject:
   - component: {fileID: 964882554}
   - component: {fileID: 964882553}
   m_Layer: 0
-  m_Name: ">>>\u8352\u539F"
+  m_Name: ">>>\u660E\u4EAE\u68EE\u6797"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17158,7 +17158,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   comeFromScenes: []
-  gotoScene: "\u8352\u539F"
+  gotoScene: "\u660E\u4EAE\u68EE\u6797"
   needInteraction: 0
 --- !u!65 &964882554
 BoxCollider:
@@ -20742,7 +20742,7 @@ GameObject:
   - component: {fileID: 1191974322}
   - component: {fileID: 1191974321}
   m_Layer: 0
-  m_Name: "<<<\u8352\u539F"
+  m_Name: "<<<\u660E\u4EAE\u68EE\u6797"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20761,7 +20761,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   comeFromScenes:
-  - "\u8352\u539F"
+  - "\u660E\u4EAE\u68EE\u6797"
   gotoScene: 
   needInteraction: 0
 --- !u!4 &1191974322
