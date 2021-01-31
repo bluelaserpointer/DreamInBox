@@ -220,11 +220,13 @@ public class PlayerMovement : MonoBehaviour
             {
                 Debug.Log("Increased Volume");
                 GameSettings.IncreaseVolume();
+                collider.GetComponent<AudioSource>().Play();
             }
             if (collider.tag == "VolumeDown")
             {
                 Debug.Log("Decreased Volume");
                 GameSettings.DecreaseVolume();
+                collider.GetComponent<AudioSource>().Play();
             }
         }
     }
