@@ -5240,7 +5240,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
-  audioSource: {fileID: 0}
   roomRotateAudioClips:
   - {fileID: 8300000, guid: 168dc94aa7e5db44b8e0eca7eeee5cdb, type: 3}
   - {fileID: 8300000, guid: 3495ff9f530360a41b88bdefc93415af, type: 3}
@@ -6531,8 +6530,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2585e2224b0b58344ac4be7b14f3f86e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 0.75
-  resetLimit: 5
+  rotationSpeed: 1.8
+  resetLimit: 2
 --- !u!64 &698315103959922640
 MeshCollider:
   m_ObjectHideFlags: 0

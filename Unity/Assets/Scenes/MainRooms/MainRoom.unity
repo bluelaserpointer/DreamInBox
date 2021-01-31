@@ -408,8 +408,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8311296755460300103, guid: 4ac585732cd81b941bbc9fb4a1674cd4,
         type: 3}
+      propertyPath: resetLimit
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8311296755460300103, guid: 4ac585732cd81b941bbc9fb4a1674cd4,
+        type: 3}
       propertyPath: rotationSpeed
-      value: 1.5
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 8523721651817664685, guid: 4ac585732cd81b941bbc9fb4a1674cd4,
         type: 3}

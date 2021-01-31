@@ -17,8 +17,8 @@ public class MainRooms : MonoBehaviour
         LONELY
 
     };
-    public float rotationSpeed = 0.75f;
-    public float resetLimit;
+    public float rotationSpeed = 1.8f;
+    public float resetLimit = 2f;
 
 
     private Quaternion targetRotation;
