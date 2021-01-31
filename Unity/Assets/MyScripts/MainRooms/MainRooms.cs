@@ -7,7 +7,8 @@ public class MainRooms : MonoBehaviour
 {
     // Start is called before the first frame update
     public static MainRooms instance;
-    public enum MainRoomType{
+    public enum MainRoomType
+    {
         WARM,
         HEALTHY,
         SAD,
@@ -26,9 +27,10 @@ public class MainRooms : MonoBehaviour
     {
     }
 
-    private void Awake() {
+    private void Awake()
+    {
         if (instance == null)
-            instance = this;   
+            instance = this;
     }
 
     // Update is called once per frame
@@ -36,9 +38,10 @@ public class MainRooms : MonoBehaviour
     {
     }
 
-    void FixedUpdate() {
+    void FixedUpdate()
+    {
         float angle = Quaternion.Angle(transform.rotation, targetRotation);
-        if(rotating && angle < resetLimit)
+        if (rotating && angle < resetLimit)
         {
             Camera.main.GetComponent<CameraShake>().Shake();
             transform.rotation = targetRotation;
@@ -51,7 +54,7 @@ public class MainRooms : MonoBehaviour
 
     public static void Rotate()
     {
-        if(instance.rotating == true)
+        if (instance.rotating == true)
             return;
 
         Vector3 direction = Vector3.right;
@@ -59,21 +62,26 @@ public class MainRooms : MonoBehaviour
         float verticalValue = Input.GetAxis("Vertical");
         float horizontalValue = Input.GetAxis("Horizontal");
 
-        if( Mathf.Abs(horizontalValue) < Mathf.Abs(verticalValue))
+        if (Mathf.Abs(horizontalValue) < Mathf.Abs(verticalValue))
         {
-            
-            if(verticalValue < 0)
+
+            if (verticalValue < 0)
             {
                 direction = Vector3.left;
-            }else{
+            }
+            else
+            {
                 direction = Vector3.right;
             }
-        }else
+        }
+        else
         {
-            if(horizontalValue < 0)
+            if (horizontalValue < 0)
             {
                 direction = Vector3.forward;
-            }else{
+            }
+            else
+            {
                 direction = Vector3.back;
             }
         }
@@ -84,7 +92,7 @@ public class MainRooms : MonoBehaviour
 
     public static bool IsRotating()
     {
-        return SceneManager.GetActiveScene().name.Equals("MainRoom") && instance.rotating;
+        return (SceneManager.GetActiveScene().name.Equals("MainRoom") || SceneManager.GetActiveScene().name.Equals("StartGame")) && instance.rotating;
     }
 
 }

@@ -7,12 +7,11 @@ public class PlayerMovement : MonoBehaviour
 {
     public float m_Speed = 12f;
     public AudioSource m_MovementAudio;
-
     private string m_HorizontalMovementAxisName;
     private string m_VerticalMovementAxisName;
     private Rigidbody m_Rigidbody;
-    public float m_HorizontalMovementInputValue;
-    public float m_VerticalMovementInputValue;
+    private float m_HorizontalMovementInputValue;
+    private float m_VerticalMovementInputValue;
     private Vector3 movementDirection;
     public float m_RaycastRange = 50f;
     public float jumpSpeed = 5f;
@@ -48,11 +47,11 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         // Store the player's input and make sure the audio for the movement is playing.
-
         m_HorizontalMovementInputValue = Input.GetAxis(m_HorizontalMovementAxisName);
         m_VerticalMovementInputValue = Input.GetAxis(m_VerticalMovementAxisName);
 
         MovementAudio();
+        Jump();
 
         //transform
         if (Input.GetButton("Transform") && Player.transforms.Count > 1)
@@ -60,9 +59,6 @@ public class PlayerMovement : MonoBehaviour
             Player.NextTransform();
             //TODO: SE
         }
-        Jump();
-
-
     }
 
 
@@ -81,7 +77,6 @@ public class PlayerMovement : MonoBehaviour
             {
                 m_MovementAudio.Play();
             }
-
         }
     }
 
@@ -89,13 +84,9 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         // Move and turn the player.
-
         Move();
         Turn();
         Raycast();
-
-        // CheckInteraction();
-
     }
 
 
@@ -108,9 +99,6 @@ public class PlayerMovement : MonoBehaviour
 
             m_Rigidbody.MovePosition(movementDirection);
         }
-
-
-
     }
 
 
@@ -144,7 +132,6 @@ public class PlayerMovement : MonoBehaviour
                     lastHitWall.GetComponent<MainRoomsWall>().hit = true;
                 }
             }
-
         }
     }
 
@@ -205,6 +192,7 @@ public class PlayerMovement : MonoBehaviour
             //TODO: item get notify(UI & SE)
         }
         VolumeModification(collider);
+        ExitGameDetection(collider);
     }
     private void Jump()
     {
@@ -232,6 +220,14 @@ public class PlayerMovement : MonoBehaviour
                 Debug.Log("Decreased Volume");
                 GameSettings.DecreaseVolume();
             }
+        }
+    }
+
+    private void ExitGameDetection(Collider collider)
+    {
+        if (Input.GetButton("Interaction") && collider.tag == "ExitGameHole")
+        {
+            GameSettings.ExitGame();
         }
     }
 }

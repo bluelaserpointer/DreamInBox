@@ -7,6 +7,9 @@ TagManager:
   - MAST_Holder
   - TransportHole
   - SpawnPoint
+  - VolumeDown
+  - VolumeUp
+  - ExitGameHole
   layers:
   - Default
   - TransparentFX
