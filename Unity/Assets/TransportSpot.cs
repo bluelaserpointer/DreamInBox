@@ -17,11 +17,13 @@ public class TransportSpot : MonoBehaviour
         BGMManeger.PlayBGM(SceneManager.GetActiveScene().name);
         if (comeFromScenes.Contains("All") || comeFromScenes.Contains(Player.lastScene))
         {
-            if(SceneManager.GetActiveScene().name.Equals("MainRoom"))
+            if (SceneManager.GetActiveScene().name.Equals("MainRoom"))
             {
                 GameObject player = GameObject.FindGameObjectWithTag("Player");
-                if (player != null)
+                if (player != null) {
+                    player.SetActive(false);
                     Destroy(player);
+                }
             }   
             Instantiate(Resources.Load("PlayerVer1"), transform.position + transform.up * 1, transform.rotation);
             Instantiate(Resources.Load("Inventory"));
