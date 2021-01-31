@@ -61,7 +61,9 @@ public class PlayerMovement : MonoBehaviour
         //detect falled form world and teleprot to mainroom
         if (transform.position.y < -10)
         {
-            SceneManager.LoadScene("MainRoom");
+            LevelChanger levelChanger = GameObject.FindGameObjectWithTag("LevelChanger").GetComponentInChildren<LevelChanger>();
+            levelChanger.FadeToLevel("MainRoom");
+            // SceneManager.LoadScene("MainRoom");
             BGMManeger.sceneChanged = true;
         }
     }
@@ -174,7 +176,9 @@ public class PlayerMovement : MonoBehaviour
         //Debug.Log(collider.gameObject.name);
         if (collider.name.Equals("MAST_Grid"))
         {
-            SceneManager.LoadScene("MainRoom");
+            LevelChanger levelChanger = GameObject.FindGameObjectWithTag("LevelChanger").GetComponentInChildren<LevelChanger>();
+            levelChanger.FadeToLevel("MainRoom");
+            // SceneManager.LoadScene("MainRoom");
             BGMManeger.sceneChanged = true;
         }
         //transport

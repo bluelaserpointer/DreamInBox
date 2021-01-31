@@ -10,6 +10,7 @@ TagManager:
   - VolumeDown
   - VolumeUp
   - ExitGameHole
+  - LevelChanger
   layers:
   - Default
   - TransparentFX
