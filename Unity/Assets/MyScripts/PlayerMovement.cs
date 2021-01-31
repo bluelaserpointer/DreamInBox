@@ -198,6 +198,7 @@ public class PlayerMovement : MonoBehaviour
         if (item != null)
         {
             Player.transforms.Add(item.type);
+            Player.completelyUsedTransforms.Add(item.type);
             item.gameObject.SetActive(false);
             //TODO: item get notify(UI & SE)
         }
