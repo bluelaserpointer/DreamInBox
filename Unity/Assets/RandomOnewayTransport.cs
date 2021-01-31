@@ -29,7 +29,9 @@ public class RandomOnewayTransport : TransportSpot
         {
             if((randomNum -= pair.weight) < 0)
             {
-                SceneManager.LoadScene(pair.sceneName);
+                base.gotoScene = pair.sceneName;
+                base.Transport();
+                return;
             }
         }
     }
