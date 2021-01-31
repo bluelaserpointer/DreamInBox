@@ -1,8 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
+[DisallowMultipleComponent]
 public class PlayerMovement : MonoBehaviour
 {
     public float m_Speed = 12f;
@@ -63,6 +62,7 @@ public class PlayerMovement : MonoBehaviour
         if (transform.position.y < -10)
         {
             SceneManager.LoadScene("MainRoom");
+            BGMManeger.sceneChanged = true;
         }
     }
 
@@ -175,6 +175,7 @@ public class PlayerMovement : MonoBehaviour
         if (collider.name.Equals("MAST_Grid"))
         {
             SceneManager.LoadScene("MainRoom");
+            BGMManeger.sceneChanged = true;
         }
         //transport
         TransportSpot transportSpot = collider.GetComponent<TransportSpot>();

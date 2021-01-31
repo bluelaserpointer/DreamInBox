@@ -14,6 +14,7 @@ public class TransportSpot : MonoBehaviour
 
     void Start()
     {
+        BGMManeger.PlayBGM(SceneManager.GetActiveScene().name);
         if (comeFromScenes.Contains("All") || comeFromScenes.Contains(Player.lastScene))
         {
             if(SceneManager.GetActiveScene().name.Equals("MainRoom"))
@@ -30,11 +31,9 @@ public class TransportSpot : MonoBehaviour
     {
         if(gotoScene.Equals("MainRoom") && Player.completelyUsedTransforms.Count == 6)
         {
-            SceneManager.LoadScene("EndScene");
+            gotoScene = "EndScene";
         }
-        else
-        {
-            SceneManager.LoadScene(gotoScene);
-        }
+        SceneManager.LoadScene(gotoScene);
+        BGMManeger.sceneChanged = true;
     }
 }
