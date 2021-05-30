@@ -121,7 +121,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2476d05b786c6164eaddc19585552306, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -169,11 +169,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Speed: 12
   m_MovementAudio: {fileID: 7229243878500855893}
-  m_HorizontalMovementInputValue: 0
-  m_VerticalMovementInputValue: 0
   m_RaycastRange: 50
   jumpSpeed: 5
   groundCheck: {fileID: 4190842942186364922}
+  litMaterial: {fileID: 2100000, guid: 0af1c01a8341c7d46945fe85b98f8e28, type: 2}
 --- !u!82 &7229243878500855893
 AudioSource:
   m_ObjectHideFlags: 0

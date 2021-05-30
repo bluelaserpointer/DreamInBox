@@ -8,7 +8,6 @@ public class PlayerMovement : MonoBehaviour
     public AudioSource m_MovementAudio;
     private string m_HorizontalMovementAxisName;
     private string m_VerticalMovementAxisName;
-    private Rigidbody m_Rigidbody;
     private float m_HorizontalMovementInputValue;
     private float m_VerticalMovementInputValue;
     private Vector3 movementDirection;
@@ -17,9 +16,28 @@ public class PlayerMovement : MonoBehaviour
     private GameObject lastHitWall;
     public GroundCheck groundCheck;
 
+    //change appearance when foot on portal
+    [SerializeField]
+    Material litMaterial;
+
+    //data
+    Rigidbody m_Rigidbody;
+    MeshRenderer meshRenderer;
+    Material normalMatrial;
+    public bool Lit
+    {
+        get => meshRenderer.material.Equals(litMaterial);
+        set
+        {
+            meshRenderer.material = value ? litMaterial : normalMatrial;
+        }
+    }
+
     private void Awake()
     {
         m_Rigidbody = GetComponent<Rigidbody>();
+        meshRenderer = GetComponent<MeshRenderer>();
+        normalMatrial = meshRenderer.material;
     }
 
 
@@ -191,12 +209,16 @@ public class PlayerMovement : MonoBehaviour
         TransportSpot transportSpot = collider.GetComponent<TransportSpot>();
         if (transportSpot != null && transportSpot.gotoScene != null && transportSpot.gotoScene.Length > 0)
         {
+            Lit = true;
             // lastCollider = collision.collider;
             // Debug.Log("Colliding with TransportHole");
             if (!transportSpot.needInteraction || CheckInteraction())
             {
                 Transport(transportSpot);
             }
+        } else
+        {
+            Lit = false;
         }
         //transformItem
         TransformItem item = collider.GetComponent<TransformItem>();
