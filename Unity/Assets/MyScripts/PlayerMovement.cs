@@ -18,26 +18,15 @@ public class PlayerMovement : MonoBehaviour
 
     //change appearance when foot on portal
     [SerializeField]
-    Material litMaterial;
+    new ParticleSystem particleSystem;
 
     //data
     Rigidbody m_Rigidbody;
-    MeshRenderer meshRenderer;
-    Material normalMatrial;
-    public bool Lit
-    {
-        get => meshRenderer.material.Equals(litMaterial);
-        set
-        {
-            meshRenderer.material = value ? litMaterial : normalMatrial;
-        }
-    }
+    float litDuration;
 
     private void Awake()
     {
         m_Rigidbody = GetComponent<Rigidbody>();
-        meshRenderer = GetComponent<MeshRenderer>();
-        normalMatrial = meshRenderer.material;
     }
 
 
@@ -63,6 +52,19 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        // lit
+        if(litDuration > 0)
+        {
+            litDuration -= Time.deltaTime;
+            var main = particleSystem.main;
+            main.startColor = new ParticleSystem.MinMaxGradient(Color.yellow);
+        }
+        else
+        {
+            var main = particleSystem.main;
+            main.startColor = new ParticleSystem.MinMaxGradient(Color.white);
+        }
+
         // Store the player's input and make sure the audio for the movement is playing.
         m_HorizontalMovementInputValue = Input.GetAxis(m_HorizontalMovementAxisName);
         m_VerticalMovementInputValue = Input.GetAxis(m_VerticalMovementAxisName);
@@ -209,16 +211,13 @@ public class PlayerMovement : MonoBehaviour
         TransportSpot transportSpot = collider.GetComponent<TransportSpot>();
         if (transportSpot != null && transportSpot.gotoScene != null && transportSpot.gotoScene.Length > 0)
         {
-            Lit = true;
+            litDuration = 0.25F;
             // lastCollider = collision.collider;
             // Debug.Log("Colliding with TransportHole");
             if (!transportSpot.needInteraction || CheckInteraction())
             {
                 Transport(transportSpot);
             }
-        } else
-        {
-            Lit = false;
         }
         //transformItem
         TransformItem item = collider.GetComponent<TransformItem>();

@@ -173,7 +173,7 @@ MonoBehaviour:
   m_RaycastRange: 50
   jumpSpeed: 5
   groundCheck: {fileID: 4190842942186364922}
-  litMaterial: {fileID: 2100000, guid: 0af1c01a8341c7d46945fe85b98f8e28, type: 2}
+  particleSystem: {fileID: 5990958818840299443}
 --- !u!82 &7229243878500855893
 AudioSource:
   m_ObjectHideFlags: 0
@@ -341,11 +341,32 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 198526010252586282, guid: 177f0e62a8812f948b9ce793848fbde8,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198526010252586282, guid: 177f0e62a8812f948b9ce793848fbde8,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198526010252586282, guid: 177f0e62a8812f948b9ce793848fbde8,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 177f0e62a8812f948b9ce793848fbde8, type: 3}
 --- !u!4 &5902751470318499889 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4413609098613416, guid: 177f0e62a8812f948b9ce793848fbde8,
+    type: 3}
+  m_PrefabInstance: {fileID: 5901236236751710873}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &5990958818840299443 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 198526010252586282, guid: 177f0e62a8812f948b9ce793848fbde8,
     type: 3}
   m_PrefabInstance: {fileID: 5901236236751710873}
   m_PrefabAsset: {fileID: 0}
